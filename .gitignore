@@ -30,3 +30,5 @@ hs_err_pid*
 /rabbitmq-consumer/.mvn/
 /rabbitmq-consumer/target/
 /springboot.iml
+/rabbitmq-producer/src/main/resources/application.yml
+/rabbitmq-consumer/src/main/resources/application.yml

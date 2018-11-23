@@ -1,6 +1,8 @@
 package com.zbl.order.controller;
 
+import com.zbl.entity.User;
 import com.zbl.order.service.OrderService;
+import lombok.extern.java.Log;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,15 +17,16 @@ import org.springframework.stereotype.Controller;
  */
 
 @Controller
-@RabbitListener(queues = "order")
-public class OrderController {
+@RabbitListener(queues = "order2")
+@Log
+public class ConsumerReceiver2 {
 
 	@Autowired
 	OrderService orderService;
 
 	@RabbitHandler
-	public void createOrder(String orderNo){
-		System.out.println("第一个队列接收到:"+orderNo);
+	public void createOrder(User user){
+		System.out.println("第二个队列接收到:"+user);
 	}
 
 }

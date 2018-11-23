@@ -2,6 +2,8 @@ package com.zbl.entity;
 
 import com.zbl.entity.enumeration.Sex;
 
+import java.io.Serializable;
+
 /**
  * @author zhaobaolong
  * @Title: User
@@ -9,7 +11,8 @@ import com.zbl.entity.enumeration.Sex;
  * @Description: 用户实体类
  * @date 2018/11/2315:22
  */
-public class User {
+public class User implements Serializable{
+	private static final long serialVersionUID = -5605388141197970541L;
 	private Integer id;
 	private String name;
 	private Sex sex;
