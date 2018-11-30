@@ -25,7 +25,7 @@ public class ProducerController {
 			User user = new User();
 			user.setId(i);
 			user.setName("姓名"+i);
-			user.setSex(i%2==0? Sex.female:Sex.male);
+//			user.setSex(i%2==0? Sex.female:Sex.male);
 			System.out.println("发送的第"+i+"条消息..");
 			rabbitTemplate.convertAndSend("order",user);
 			rabbitTemplate.convertAndSend("order2",user);

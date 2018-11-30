@@ -5,13 +5,12 @@ import org.apache.ibatis.annotations.Select;
 
 /**
  * @author zhaobaolong
- * @Title: RedisDao
+ * @Title: UserDao
  * @ProjectName springboot
- * @Description:
- * @date 2018/11/2916:15
+ * @Description: TODO
+ * @date 2018/11/3010:53
  */
-public interface RedisDao {
-
+public interface UserDao {
 	@Select("select * from user where id=#{id}")
-	User getUser(Integer id);
+	User getUserById(Integer id);
 }

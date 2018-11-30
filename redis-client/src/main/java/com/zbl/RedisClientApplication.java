@@ -3,20 +3,21 @@ package com.zbl;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
 /**
  * @author zhaobaolong
- * @Title: RedisApplication
+ * @Title: RedisClientApplication
  * @ProjectName springboot
  * @Description: TODO
- * @date 2018/11/2911:24
+ * @date 2018/11/3010:49
  */
 @SpringBootApplication
-@EnableCaching
+@EnableEurekaClient
 @MapperScan("com.zbl.dao")
-public class RedisApplication {
+public class RedisClientApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(RedisApplication.class,args);
+		SpringApplication.run(RedisClientApplication.class,args);
 	}
 }

@@ -1,11 +1,13 @@
 package com.zbl.controller;
 
+import com.netflix.discovery.converters.Auto;
 import com.zbl.entity.User;
-import com.zbl.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * @author zhaobaolong
@@ -15,12 +17,14 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2018/11/2911:23
  */
 @RestController
-public class RedisController {
-	@Autowired
-	RedisService redisService;
+public class RedisServerController {
+	private final String  url="http://REDIS-CLIENT";
 
-	@RequestMapping("/redis/user")
-	public User getUser(String id){
-		return redisService.getUser(id);
+	@Autowired
+	RestTemplate restTemplate;
+
+	@RequestMapping("/user/{id}")
+	public User getUser(@PathVariable Integer id){
+		return restTemplate.getForObject(url+"/user/"+id,User.class);
 	}
 }

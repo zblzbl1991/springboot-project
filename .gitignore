@@ -26,10 +26,11 @@ hs_err_pid*
 
 /.idea/
 /common-api/common-api.iml
-!/.idea/
 /rabbitmq-consumer/.mvn/
 /rabbitmq-consumer/target/
 /springboot.iml
 /rabbitmq-producer/src/main/resources/application.yml
 /rabbitmq-consumer/src/main/resources/application.yml
 /redis-server/target/
+!/rabbitmq-producer/target/
+/eureka-server/.mvn/
