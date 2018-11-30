@@ -15,7 +15,7 @@ public class User implements Serializable{
 	private static final long serialVersionUID = -5605388141197970541L;
 	private Integer id;
 	private String name;
-	private Sex sex;
+	private Integer sex;
 
 	public Integer getId() {
 		return id;
@@ -33,11 +33,11 @@ public class User implements Serializable{
 		this.name = name;
 	}
 
-	public Sex getSex() {
+	public Integer getSex() {
 		return sex;
 	}
 
-	public void setSex(Sex sex) {
+	public void setSex(Integer sex) {
 		this.sex = sex;
 	}
 
