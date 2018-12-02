@@ -38,3 +38,6 @@ hs_err_pid*
 /springboot-cache/mvnw
 /springboot-cache/springboot-cache.iml
 /springboot-cache/.mvn/
+/redis-server/target/
+!/rabbitmq-producer/target/
+/eureka-server/.mvn/
