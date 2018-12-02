@@ -1,0 +1,13 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://baiduyun:7001/eureka
+    register-with-eureka: false
+  instance:
+    instance-id: redis-server8001
+server:
+  port: 8001
+spring:
+  application:
+    name: redis-server
+
