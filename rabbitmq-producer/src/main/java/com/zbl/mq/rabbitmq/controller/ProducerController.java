@@ -1,7 +1,6 @@
 package com.zbl.mq.rabbitmq.controller;
 
 import com.zbl.entity.User;
-import com.zbl.entity.enumeration.Sex;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +28,7 @@ public class ProducerController {
 			System.out.println("发送的第"+i+"条消息..");
 			rabbitTemplate.convertAndSend("order",user);
 			rabbitTemplate.convertAndSend("order2",user);
+
 		}
 
 		return "success";

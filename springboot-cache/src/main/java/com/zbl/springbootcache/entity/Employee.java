@@ -1,7 +1,10 @@
 package com.zbl.springbootcache.entity;
 
-public class Employee {
-	
+import java.io.Serializable;
+
+public class Employee implements Serializable{
+
+	private static final long serialVersionUID = -5842833710513548334L;
 	private Integer id;
 	private String lastName;
 	private String email;

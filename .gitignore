@@ -43,3 +43,5 @@ hs_err_pid*
 /eureka-server/.mvn/
 !/redis-client/redis-client.iml
 /redis-client/redis-client.iml
+!/rabbitmq-producer/src/main/resources/application.yml
+!/rabbitmq-consumer/src/main/resources/application.yml

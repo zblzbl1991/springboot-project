@@ -1,12 +1,12 @@
 spring:
   datasource:
-    url: jdbc:mysql://106.13.10.6:3306/springboot-project?useUnicode=true&characterEncoding=utf8&useAffectedRows=true&serverTimezone=GMT%2B8&useSSL=false
+    url: jdbc:mysql://baiduyun:3306/springboot-project?useUnicode=true&characterEncoding=utf8&useAffectedRows=true&serverTimezone=GMT%2B8&useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-#  redis:
-#    host: 106.13.10.6
-#    password: zhaobaolong1
+  redis:
+    host: baiduyun
+    password: zhaobaolong1
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
