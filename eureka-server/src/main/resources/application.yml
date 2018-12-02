@@ -1,0 +1,45 @@
+
+spring:
+  application:
+    name: eureka7001
+  profiles:
+    active: server1
+---
+spring:
+  profiles: server1
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://baiduyun:7002/eureka
+  instance:
+    hostname: eureka7001
+server:
+  port: 7001
+---
+spring:
+ profiles: server2
+eureka:
+ client:
+   fetch-registry: false
+   register-with-eureka: false
+   service-url:
+     defaultZone: http://baiduyun:7001/eureka
+ instance:
+   hostname: eureka7002
+server:
+ port: 7002
+---
+#spring:
+# profiles: server3
+#eureka:
+# client:
+#   fetch-registry: false
+#   register-with-eureka: false
+#   service-url:
+#     defaultZone: http://baiduyun:7001/eureka,http://baiduyun:7002/eureka
+# instance:
+#   hostname: eureka7003
+#server:
+# port: 7003
