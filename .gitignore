@@ -35,3 +35,4 @@ hs_err_pid*
 !/rabbitmq-producer/target/
 /eureka-server/.mvn/
 /springboot-project.iml
+/redis-server/redis-server.iml
