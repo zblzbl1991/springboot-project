@@ -36,3 +36,12 @@ hs_err_pid*
 /eureka-server/.mvn/
 /springboot-project.iml
 /redis-server/redis-server.iml
+/springboot-cache/mvnw.cmd
+/springboot-cache/mvnw
+/springboot-cache/springboot-cache.iml
+/springboot-cache/.mvn/
+
+!/redis-client/redis-client.iml
+/redis-client/redis-client.iml
+!/rabbitmq-producer/src/main/resources/application.yml
+!/rabbitmq-consumer/src/main/resources/application.yml
