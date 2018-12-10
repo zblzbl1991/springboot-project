@@ -1,7 +1,7 @@
-package com.zbl.springbootcache;
+package com.zbl.service;
 
-import com.zbl.springbootcache.entity.Employee;
-import com.zbl.springbootcache.mapper.EmployeeMapper;
+import com.zbl.entity.Employee;
+import com.zbl.mapper.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CachePut;

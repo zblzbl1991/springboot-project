@@ -1,0 +1,15 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-nodes: 127.0.0.1:9300
+      repositories:
+        enabled: true
+  datasource:
+    url: jdbc:mysql://106.13.10.6:3306/springboot-project?useUnicode=true&characterEncoding=utf8&useAffectedRows=true&serverTimezone=GMT%2B8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

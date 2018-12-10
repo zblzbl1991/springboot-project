@@ -23,6 +23,9 @@
     <module>redis-server</module>
     <module>eureka-server</module>
     <module>redis-client</module>
+    <module>springboot-cache</module>
+    <module>springboot-activiti</module>
+    <module>springboot-elastcisearch</module>
 </modules>
     <dependencyManagement>
         <dependencies>

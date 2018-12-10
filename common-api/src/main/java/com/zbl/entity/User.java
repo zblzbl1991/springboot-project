@@ -3,6 +3,7 @@ package com.zbl.entity;
 import com.zbl.entity.enumeration.Sex;
 
 import java.io.Serializable;
+import java.lang.annotation.Documented;
 
 /**
  * @author zhaobaolong
@@ -11,6 +12,8 @@ import java.io.Serializable;
  * @Description: 用户实体类
  * @date 2018/11/2315:22
  */
+
+
 public class User implements Serializable{
 	private static final long serialVersionUID = -5605388141197970541L;
 	private Integer id;

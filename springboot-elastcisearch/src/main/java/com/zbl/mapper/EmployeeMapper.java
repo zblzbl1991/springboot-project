@@ -1,6 +1,6 @@
-package com.zbl.springbootcache.mapper;
+package com.zbl.mapper;
 
-import com.zbl.springbootcache.entity.Employee;
+import com.zbl.entity.Employee;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
