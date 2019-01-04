@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jq.js"></script>
+    <script src="/js/vue.js"></script>
+</head>
+<body>
+<div id="vueContainer">
+    <input
+            type="text"
+            v-model="searchContent"
+    />
+    <button @click="doSearch">点击搜索</button>
+    <div v-for="result in searchResult">BrandName : {{ result.brandName }} Name : {{ result.name }}</div>
+</div>
+<script>
+    var vm = new Vue({
+        el : "#vueContainer",
+        data : {
+            searchContent : "",
+            searchResult : []
+        },
+        methods : {
+            doSearch : function(){
+                var self = this;
+                $.ajax({
+                    url : "/search",
+                    method : "POST",
+                    data : self.searchContent,
+                    contentType : "application/json;charset=utf-8",
+                    success : function(res) {
+                        self.searchResult = res;
+                        self.$forceUpdate();
+                    }
+                });
+            }
+        }
+    });
+</script>
+</body>
+</html>
